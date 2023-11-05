@@ -4,7 +4,7 @@ import VideoCard from "./VideoCard"
 const Videos = ({videos}) => {
     
   return (
-    <div className="flex flex-row flex-wrap justify-center md:justify-start  ">
+    <div className="flex flex-row flex-wrap justify-center  ">
         {videos.map((item, index)=>(
             <div key={index}>
                 {item.id.videoId && <VideoCard video={item}/>}

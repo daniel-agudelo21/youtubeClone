@@ -3,7 +3,7 @@ import { demoProfilePicture } from "../assets/constants";
 import { Link } from "react-router-dom";
 const ChannelCard = ({ channelDetail }) => {
   return (
-    <div className=" pt-2 flex flex-col w-96 md:w-80 h-[346px] px-1  ">
+    <div className=" pt-2 flex flex-col w-96 md:w-80 h-[346px] px-1 ">
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
         <div className="flex flex-col justify-center items-center text-white font-bold text-xl">
           <img
@@ -14,7 +14,18 @@ const ChannelCard = ({ channelDetail }) => {
             }
             alt={channelDetail?.snippet?.title}
           />
-          <h2 className="flex flex-row items-center text-gray-400 mt-4">{channelDetail?.snippet?.title}<AiFillCheckCircle className="text-k-orange ml-2"/></h2>
+          <h2 className="flex flex-row items-center text-gray-400 mt-4">
+            {channelDetail?.snippet?.title}
+            <AiFillCheckCircle className="text-k-orange ml-2" />
+          </h2>
+          {channelDetail?.statistics?.subscriberCount && (
+            <h3>
+              {parseInt(
+                channelDetail?.statistics?.subscriberCount
+              ).toLocaleString()}{" "}
+              Subscribers
+            </h3>
+          )}
         </div>
       </Link>
     </div>
