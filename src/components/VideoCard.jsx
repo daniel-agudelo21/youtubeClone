@@ -16,7 +16,7 @@ const VideoCard = ({
 }) => {
   
   return (
-    <div className="md:w-80 w-96 ">
+    <div className=" md:w-80 w-96 ">
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <div>
           <img
