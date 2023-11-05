@@ -13,9 +13,9 @@ const Feed = () => {
     );
   }, [selectedCategory]);
   return (
-    <div className="flex flex-col  md:flex-row ">
-      <nav >
-        <div className="h-14 px-0 md:h-full md:px-2 md:border-r-[1px] md:border-k-orange md:border-opacity-30 md:w-60">
+    <div className="flex flex-col md:flex-row  ">
+      <div className="" >
+        <div  className="h-auto md:sticky md:top-0 md:left-0 md:h-screen px-2 md:border-r-[1px] md:border-k-orange md:border-opacity-30 md:w-60">
           <SideBar
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
@@ -24,13 +24,13 @@ const Feed = () => {
             Copyright &copy; <span id="year">2023</span>
           </p>
         </div>
-      </nav>
-      <nav className="overflow-y-auto p-2  flex flex-col md:flex md:flex-col">
+      </div>
+      <div className="overflow-y-auto p-2  flex flex-col md:flex-col">
         <p className="text-white font-bold mb-2 text-3xl">
           {selectedCategory} <span className="text-k-orange">Videos</span>
         </p>
         <Videos videos={videos} />
-      </nav>
+      </div>
     </div>
   );
 };
