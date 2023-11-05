@@ -1,7 +1,10 @@
-
-const ChannelCard = () => {
+import { AiFillCheckCircle } from "react-icons/ai";
+import { demoProfilePicture } from "../assets/constants";
+const ChannelCard = ({channelDetail}) => {
   return (
-    <div>ChannelCard</div>
+    <div className=" rounded-xl">
+
+    </div>
   )
 }
 

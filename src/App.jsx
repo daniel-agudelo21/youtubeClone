@@ -7,7 +7,7 @@ import SearchFeed from "./components/SearchFeed";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-k4-black h-screen">
+      <div className="bg-k4-black min-h-screen">
         <Navbar />
         <Routes>
           <Route path="/" element={<Feed />} />

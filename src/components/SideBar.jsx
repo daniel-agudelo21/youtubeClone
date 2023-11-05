@@ -26,7 +26,7 @@ const SideBar = ({ selectedCategory, setSelectedCategory }) => {
 
   
   return (
-    <div className="flex flex-row overflow-y-auto h-14 md:h-[850px] md:flex-col w-full ">
+    <div className="flex flex-row overflow-y-auto h-14 md:h-auto md:flex-col w-full ">
       {categories.map((category) => (
         <button
           key={category.name}
