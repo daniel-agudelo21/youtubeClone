@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  }
+  
+  .react-players {
+    border-radius: 10px !important;
+    @screen sm {
+        height: 82vh !important;
+      }
+      height: 30vh !important;
+      width: 100% !important;
+    }
+
+  .mobile-react-players {
+    height: 100% ;
+    width: 100% ;
+  }
