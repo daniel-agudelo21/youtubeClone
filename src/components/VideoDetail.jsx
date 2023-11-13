@@ -4,6 +4,8 @@ import ReactPlayer from "react-player";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { fetchFromAPI } from "../assets/fetchFromAPI";
 import Videos from "./Videos";
+import ChannelCard from "./ChannelCard";
+import { demoProfilePicture } from "../assets/constants";
 const VideoDetail = ({ channelDetail }) => {
   const { id } = useParams();
   const [videoDetail, setVideoDetail] = useState(null);
@@ -45,10 +47,11 @@ const VideoDetail = ({ channelDetail }) => {
                 className=" rounded-full w-6 h-6 mr-2 "
                 src={
                   channelDetail?.snippet?.thumbnails?.high?.url ||
-                  `../assets/defaultProfile.png`
+                  demoProfilePicture
                 }
                 alt={channelDetail?.snippet?.title}
               />
+
               <h3 className="flex flex-row items-center text-gray-300 ">
                 {channelTitle} <AiFillCheckCircle className="ml-2 text-sm" />
               </h3>
@@ -69,7 +72,6 @@ const VideoDetail = ({ channelDetail }) => {
         <Videos videos={videos} />
       </div>
     </div>
-    
   );
 };
 

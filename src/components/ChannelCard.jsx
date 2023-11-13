@@ -1,4 +1,5 @@
 import { AiFillCheckCircle } from "react-icons/ai";
+import { demoProfilePicture } from "../assets/constants";
 import { Link } from "react-router-dom";
 const ChannelCard = ({ channelDetail }) => {
   return (
@@ -9,7 +10,7 @@ const ChannelCard = ({ channelDetail }) => {
             className=" rounded-full w-60 md:w-48 md:h-48 "
             src={
               channelDetail?.snippet?.thumbnails?.high?.url ||
-              `../assets/defaultProfile.png`
+              demoProfilePicture
             }
             alt={channelDetail?.snippet?.title}
           />
