@@ -23,13 +23,13 @@ const VideoDetail = ({ channelDetail }) => {
     statistics: { viewCount, likeCount },
   } = videoDetail;
   return (
-    <div className="flex ">
-      <div className="w-full border">
+    <div className="flex flex-col">
+      <div className="w-full mb-4">
         <div className="mb-4">
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${id}`}
             className="react-players"
-            playing="true"
+            playing={true}
             controls
           />
         </div>
@@ -70,6 +70,7 @@ const VideoDetail = ({ channelDetail }) => {
         <Videos videos={videos} />
       </div>
     </div>
+    
   );
 };
 
