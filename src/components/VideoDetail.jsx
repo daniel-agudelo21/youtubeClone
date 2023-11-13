@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { demoProfilePicture } from "../assets/constants";
 import { fetchFromAPI } from "../assets/fetchFromAPI";
 import Videos from "./Videos";
 const VideoDetail = ({ channelDetail }) => {
@@ -46,7 +45,7 @@ const VideoDetail = ({ channelDetail }) => {
                 className=" rounded-full w-6 h-6 mr-2 "
                 src={
                   channelDetail?.snippet?.thumbnails?.high?.url ||
-                  demoProfilePicture
+                  `../assets/defaultProfile.png`
                 }
                 alt={channelDetail?.snippet?.title}
               />
